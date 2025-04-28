@@ -21,12 +21,12 @@ function Header() {
   }, []);
 
   return (
-    <header className={`fixed w-full z-50 transition-all ${isScrolled ? 'bg-blue-800 shadow-md' : 'bg-blue-900'}`}>
+    <header className={`w-full z-50 transition-all ${isScrolled ? 'bg-blue-800 shadow-md' : 'bg-blue-900'}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="logo">
           <Link to="/" className="text-white text-2xl font-bold">
-            Dr. Sarah Johnson
-            <span className="block text-sm font-normal">Psychology Practice</span>
+            Charlotte Pfalz-Blezinger
+            <span className="block text-sm font-normal">Dipl. Psychologin</span>
           </Link>
         </div>
         

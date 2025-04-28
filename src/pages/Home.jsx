@@ -6,6 +6,7 @@ import BlogCard from "../components/BlogCard";
 
 function Home() {
     const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     const [showWelcome, setShowWelcome] = useState(false);
     
     const handleSubmit = (e) => {
@@ -18,30 +19,30 @@ function Home() {
     return (
       <main>
         {/* Hero Section */}
-        <section className="hero min-h-screen bg-blue-900 flex items-center">
-          <div className="inset-0 overflow-hidden">
+        <section className="hero min-h-screen bg-blue-900 flex items-center relative">
+          <div className="absolute inset-0 overflow-hidden">
             <img 
-              src="/images/psychology-office.jpg" 
+              src="/src/assets/Charlotte Pfalz-Blezinger_banner_cropped.png" 
               alt="Psychology Office" 
-              className="w-full h-full object-cover opacity-20"
+              className="w-full h-full object-cover opacity-70"
             />
           </div>
-          <div className="container mx-auto px-4 z-10">
-            <div className="max-w-xl">
+          <div className="container mx-auto px-16 z-10">
+            <div className="max-w-lg">
               {!showWelcome ? (
-                <div className="bg-white/10 backdrop-blur p-8 rounded-lg shadow-lg">
-                  <h1 className="text-white text-4xl mb-4 font-light">Welcome to my Practice</h1>
-                  <p className="text-white mb-6">I'd like to welcome you personally to my website.</p>
+                <div className="bg-black/15 backdrop-blur p-8 rounded-lg shadow-lg">
+                  <h1 className="text-white text-4xl mb-4 font-light">Herzlich Willkommen</h1>
+                  <p className="text-white mb-6">Auf meiner persönlichen Website</p>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <input 
                         type="text" 
-                        placeholder="Your first name..."
+                        placeholder="Dein Vorname..."
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className="w-full p-3 rounded bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-300"
                       />
-                      <p className="text-white/70 text-sm mt-1">* Your name will only be stored if you consent on the next page.</p>
+                      <p className="text-white/70 text-sm mt-1">*Dein Name wird nur temporär gespeichert.</p>
                     </div>
                     <button 
                       type="submit"
@@ -52,18 +53,30 @@ function Home() {
                   </form>
                 </div>
               ) : (
-                <div className="bg-white/10 backdrop-blur p-8 rounded-lg shadow-lg text-center">
-                  <h1 className="text-white text-4xl mb-4 font-light">Hello, {name}!</h1>
-                  <p className="text-white text-xl mb-6">Thank you for visiting my practice website.</p>
-                  <p className="text-white mb-8">
-                    My approach focuses on creating a safe environment where we can work together 
-                    to help you overcome challenges and improve your mental well-being.
-                  </p>
+                <div className="bg-black/15 backdrop-blur p-8 rounded-lg shadow-lg">
+                  <h2 className="text-white text-3xl mb-4 font-light">Hallo, {name}! Ich freue mich, dass du bei mir vorbeischaust.</h2>
+                  <p className="text-white text-lg mb-6">Wollen wir in Kontakt bleiben?</p>
+                  <div className="mb-6">
+                      <input 
+                        type="text" 
+                        placeholder="Deine Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full p-3 rounded bg-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                      />
+                      <div className="flex justify-between m-2 mb-6">
+                        <label class="container text-lg w-8">
+                          <input type="checkbox"/>
+                          <span class="checkmark"></span>
+                        </label>
+                        <p className="text-white/70 text-sm mt-1">Ja, Ich will über die neuesten Entwicklungen über Email informiert werden.</p>
+                      </div>
+                    </div>
                   <a 
                     href="#about-section" 
-                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-md transition"
+                    className="inline-block bg-blue-900 hover:bg-blue-600 text-white hover:text-white py-2 px-6 rounded-md transition"
                   >
-                    Learn More About My Practice
+                    Lerne mehr über meine Arbeit
                   </a>
                 </div>
               )}
