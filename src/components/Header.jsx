@@ -21,10 +21,10 @@ function Header() {
   }, []);
 
   return (
-    <header className={`w-full z-50 transition-all ${isScrolled ? 'bg-blue-800 shadow-md' : 'bg-blue-900'}`}>
+    <header className="w-full z-50 transition-all">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="logo">
-          <Link to="/" className="text-white text-2xl font-bold">
+          <Link to="/" className="text-black text-2xl font-bold">
             Charlotte Pfalz-Blezinger
             <span className="block text-sm font-normal">Dipl. Psychologin</span>
           </Link>
@@ -33,11 +33,11 @@ function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
-            <li><Link to="/" className="text-white hover:text-blue-200 transition">Home</Link></li>
-            <li><Link to="/about" className="text-white hover:text-blue-200 transition">About</Link></li>
-            <li><Link to="/services" className="text-white hover:text-blue-200 transition">Services</Link></li>
-            <li><Link to="/blog" className="text-white hover:text-blue-200 transition">Blog</Link></li>
-            <li><Link to="/contact" className="text-white hover:text-blue-200 transition">Contact</Link></li>
+            <li><Link to="/" className="text-black hover:text-blue-200 transition">Home</Link></li>
+            <li><Link to="/about" className="text-black hover:text-blue-200 transition">About</Link></li>
+            <li><Link to="/services" className="text-black hover:text-blue-200 transition">Services</Link></li>
+            <li><Link to="/blog" className="text-black hover:text-blue-200 transition">Blog</Link></li>
+            <li><Link to="/contact" className="text-black hover:text-blue-200 transition">Contact</Link></li>
           </ul>
         </nav>
         
