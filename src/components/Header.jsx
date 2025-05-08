@@ -22,22 +22,25 @@ function Header() {
 
   return (
     <header className="w-full z-50 transition-all">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-5 flex justify-between items-center">
         <div className="logo">
-          <Link to="/" className="text-black text-2xl font-bold">
-            Charlotte Pfalz-Blezinger
-            <span className="block text-sm font-normal">Dipl. Psychologin</span>
+          <Link to="/" className="text-blue-950 hover:text-blue-600 text-4xl font-bold">
+            <div className='flex flex-col'>
+              <span>Charlotte Pfalz-Blezinger</span>
+              <span className="block font-normal text-4xl"></span>
+              <span className="block font-normal text-xl">Diplom-Psychologin</span>
+            </div>
           </Link>
         </div>
         
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            <li><Link to="/" className="text-black hover:text-blue-200 transition">Home</Link></li>
-            <li><Link to="/about" className="text-black hover:text-blue-200 transition">About</Link></li>
-            <li><Link to="/services" className="text-black hover:text-blue-200 transition">Services</Link></li>
-            <li><Link to="/blog" className="text-black hover:text-blue-200 transition">Blog</Link></li>
-            <li><Link to="/contact" className="text-black hover:text-blue-200 transition">Contact</Link></li>
+          <ul className="flex space-x-8 -mt-4">
+            <li><Link to="/" className="text-blue-950 text-xl hover:text-blue-600 transition">Home</Link></li>
+            <li><Link to="/about" className="text-blue-950 text-xl hover:text-blue-600 transition">About</Link></li>
+            <li><Link to="/services" className="text-blue-950 text-xl hover:text-blue-600 transition">Services</Link></li>
+            <li><Link to="/blog" className="text-blue-950 text-xl hover:text-blue-600 transition">Blog</Link></li>
+            <li><Link to="/contact" className="text-blue-950 text-xl hover:text-blue-600 transition">Contact</Link></li>
           </ul>
         </nav>
         

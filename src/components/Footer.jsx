@@ -7,7 +7,7 @@ function Footer() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl mb-4 font-light">Dr. Sarah Johnson</h3>
+              <h3 className="text-xl mb-4 font-light">Dipl. Psych. Charlotte Pfalz-Blezinger</h3>
               <p className="mb-2">Licensed Clinical Psychologist</p>
               <p>Helping you navigate life's challenges with compassion and expertise.</p>
             </div>
@@ -51,7 +51,7 @@ function Footer() {
           
           <div className="mt-12 pt-8 border-t border-blue-800 flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-sm text-blue-200">© {new Date().getFullYear()} Dr. Sarah Johnson. All rights reserved.</p>
+              <p className="text-sm text-blue-200">© {new Date().getFullYear()} All rights reserved.</p>
             </div>
             <nav>
               <ul className="flex flex-wrap justify-center space-x-6">

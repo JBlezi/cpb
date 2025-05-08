@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Header from '../components/Header';
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -39,8 +40,9 @@ function Contact() {
     };
     
     return (
-      <div className="pt-24 pb-20 bg-gray-50">
-        <div className="container mx-auto px-4">
+      <div className="pb-20 bg-gray-50">
+        <Header></Header>
+        <div className="container pt-24 mx-auto px-4">
           <h1 className="text-4xl text-blue-900 mb-12 text-center font-light">Contact Me</h1>
           
           <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
